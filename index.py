@@ -171,10 +171,16 @@ for word in words:
 print(freq)
 '''
 
-
+total = 0
+count = 0
 with open("myFile.txt","r") as file:
   for line in file:
-    print(line.strip())
+     name, marks = line.strip().split(",")
+     total += int(marks )
+     count += 1
 
 
 
+print(total)
+print(count)
+print("avg == ",total/count)
